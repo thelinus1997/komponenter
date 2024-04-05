@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./meatballMenu.scss";
 import meatballSvg from "./meatballSvg.svg";
+
 const numArr: number[] = [1, 2, 3, 4, 5];
 const MeatballMenu = () => {
   const [menuVis, setmenuVis] = useState(false);
