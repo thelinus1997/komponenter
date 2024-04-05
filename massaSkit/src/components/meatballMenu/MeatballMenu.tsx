@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./meatballMenu.scss";
-const MeatballMenu = () => {
+
+type Props = {
+  handleInput: (input: number) => void;
+};
+const MeatballMenu: React.FC<Props> = ({ handleInput }) => {
   const [menuVis, setmenuVis] = useState(false);
+
   const menuVisibility = () => {
     setmenuVis(!menuVis);
   };
-  const handleClick = (sheeeee: string) => {
-    console.log(sheeeee);
+  const handleClick = (input: number) => {
+    handleInput(input);
     setmenuVis(false);
   };
   return (
@@ -14,9 +19,9 @@ const MeatballMenu = () => {
       <div onClick={menuVisibility}>***</div>
       {menuVis && (
         <ul>
-          <li onClick={() => handleClick("one")}>one</li>
-          <li onClick={() => handleClick("two")}>two</li>
-          <li onClick={() => handleClick("three")}>three</li>
+          <li onClick={() => handleClick(1)}>one</li>
+          <li onClick={() => handleClick(2)}>two</li>
+          <li onClick={() => handleClick(3)}>three</li>
         </ul>
       )}
     </div>
