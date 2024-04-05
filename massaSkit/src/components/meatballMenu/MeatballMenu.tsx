@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./meatballMenu.scss";
-
+import meatballSvg from "./meatballSvg.svg";
+const numArr: number[] = [1, 2, 3, 4, 5];
 const MeatballMenu = () => {
   const [menuVis, setmenuVis] = useState(false);
   const [value, setValue] = useState(0);
@@ -15,17 +16,17 @@ const MeatballMenu = () => {
   return (
     <div>
       <h1>Change this number: {value}</h1>
-      <div className="meatballMenu">
-        <div onClick={menuVisibility} className="meatballButton">
-          ***
+      <div className={`meatballMenu ${menuVis ? "visible" : ""}`}>
+        <div className="meatballButton" onClick={menuVisibility}>
+          <img src={meatballSvg} alt="" />
         </div>
-        {menuVis && (
-          <ul>
-            <li onClick={() => handleClick(1)}>one</li>
-            <li onClick={() => handleClick(2)}>two</li>
-            <li onClick={() => handleClick(3)}>three</li>
-          </ul>
-        )}
+        <ul className={`dropdown ${menuVis ? "visible" : ""}`}>
+          {numArr.map((index) => (
+            <li onClick={() => handleClick(numArr[index - 1])}>
+              {numArr[index - 1]}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

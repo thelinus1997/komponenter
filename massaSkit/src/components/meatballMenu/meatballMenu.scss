@@ -1,13 +1,38 @@
+/* meatballMenu.scss */
+@import "../colors";
+
 .meatballMenu {
   max-width: fit-content;
-  .meatballButton:hover {
+
+  .meatballButton {
     cursor: pointer;
   }
-  li {
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+  ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hoverColor;
+      }
+    }
   }
-  li:hover {
-    background-color: lightblue;
-    cursor: pointer;
+
+  /* Dropdown animation */
+  .dropdown {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+
+    &.visible {
+      max-height: 100px; /* Adjust the value based on your content */
+    }
   }
 }
