@@ -10,7 +10,7 @@ const MeatballMenu = () => {
     setmenuVis(false);
   };
   return (
-    <div>
+    <div className="meatballMenu">
       <div onClick={menuVisibility}>***</div>
       {menuVis && (
         <ul>

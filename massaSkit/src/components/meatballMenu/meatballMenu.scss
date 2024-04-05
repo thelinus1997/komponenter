@@ -1,8 +1,10 @@
-li {
-  list-style-type: none;
-  width: 3rem;
-}
-li:hover {
-  background-color: lightblue;
-  cursor: pointer;
+.meatballMenu {
+  li {
+    list-style-type: none;
+    width: 3rem;
+  }
+  li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+  }
 }
