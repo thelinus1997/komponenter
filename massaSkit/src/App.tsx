@@ -1,12 +1,8 @@
 import React from "react";
-import MeatballMenu from "./components/MeatballMenu";
-
+import "./App.css";
+import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 const App = () => {
-  return (
-    <div>
-      <MeatballMenu />
-    </div>
-  );
+  return <MeatballMenu />;
 };
 
 export default App;
