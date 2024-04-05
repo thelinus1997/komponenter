@@ -1,7 +1,10 @@
 .meatballMenu {
+  max-width: fit-content;
+  .meatballButton:hover {
+    cursor: pointer;
+  }
   li {
     list-style-type: none;
-    width: 3rem;
   }
   li:hover {
     background-color: lightblue;
