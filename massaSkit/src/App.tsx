@@ -4,6 +4,7 @@ import MeatballMenu from "./components/meatballMenu/MeatballMenu"
 import SearchBtn from "./components/SearchBtn/SearchBtn"
 import BentoMenu from "./components/BentoMenu/BentoMenu"
 import DatePicker from "./components/DatePicker/DatePicker"
+import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 const App = () => {
   const [date, setDate] = useState("")
   const setDateChosed = (date: string) => {
@@ -22,6 +23,7 @@ const App = () => {
         setDateChosed={setDateChosed}
         datePickerStyleRow={false}
       />
+      <DragAndDrop />
       <p>Date chosed: {date}</p>
     </>
   )
