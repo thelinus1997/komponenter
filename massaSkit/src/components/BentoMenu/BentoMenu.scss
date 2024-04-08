@@ -1,0 +1,98 @@
+.bentoMenu {
+    display: grid;
+    grid-template-columns: 1rem 1rem 1rem;
+    gap: 0.5rem; 
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+}
+
+.square {
+    height: 1rem;
+    width: 1rem;
+    background-color: aquamarine;
+}
+
+.menulist {
+    list-style: none;
+    width: 15rem;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s, height 0.3s;
+    border-radius: 0 0 20px 20px;
+    background-color: whitesmoke
+   
+}
+
+.animationGrowDown               {
+    animation: growDown 6s;
+    
+
+}
+@keyframes growDown{
+    0%{
+        max-height: 0%;
+        opacity: 0;
+    
+    }
+
+    50%{
+        max-height: 50%;
+    }
+    100%{
+        max-height: 100%;
+        background-color: whitesmoke;
+    }
+}
+
+.visible {
+    opacity: 1;
+    height: auto;
+}
+
+
+ .bentoMenu:hover span:nth-child(1) {
+    transform: translate(0%, 88%);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(2) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(3) {
+    transform: translate(0%, 88%);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(4) {
+    transform: translate(88%, 0%);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(5) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(6) {
+    transform: translate(-88%, 0%);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(7) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(8) {
+    transform: translate(0%, -88%);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover span:nth-child(9) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+}
+ 
