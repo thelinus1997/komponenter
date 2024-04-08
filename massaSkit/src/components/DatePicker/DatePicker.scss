@@ -1,0 +1,91 @@
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+@import "./abstracts/variables";
+
+.DatePicker {
+  width: fit-content;
+  background-color: $background-color-secondary;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  border-radius: $border-radius-primary;
+  display: flex;
+  flex-direction: column;
+  animation: grow 3s;
+
+  label {
+    background-color: $background-color-button-primary;
+    color: $color-secondary;
+    text-align: center;
+    font-size: $font-size-secondary;
+    margin-bottom: $margin-primary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+  }
+  input[type="date"] {
+    background-color: $background-color-button-primary;
+    color: $color-secondary;
+
+    font-size: $font-size-secondary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  [type="date"]::-webkit-calendar-picker-indicator {
+    &:hover {
+      cursor: pointer;
+      background-color: opacity($color: 60%);
+    }
+  }
+
+  button {
+    background-color: $background-color-button-primary;
+    color: $color-secondary;
+
+    font-size: $font-size-secondary;
+    margin-top: $margin-primary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $background-color-secondary;
+      transform: translateX(5px);
+    }
+  }
+}
+.datePickerStyleRow {
+  margin: $margin-primary;
+  padding: $padding-primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  label {
+    margin: $margin-primary;
+    padding: $padding-primary;
+  }
+  input[type="date"] {
+    margin: $margin-primary;
+    padding: $padding-primary;
+    border-radius: $border-radius-primary;
+  }
+
+  button {
+    margin: $margin-primary;
+    padding: $padding-primary;
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
